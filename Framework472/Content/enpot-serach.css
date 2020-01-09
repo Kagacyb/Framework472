@@ -1,0 +1,68 @@
+﻿/*body, td, th {
+    font-family: Arial,Verdana, Helvetica, sans-serif
+}*/
+
+.enpot-search-group {
+    margin-bottom: 10px;
+}
+
+.enpot-search-leftTitle {
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+    vertical-align: middle
+}
+
+.enpot-search-rightContext {
+    height: 24px;
+    position: absolute;
+    left: 43px;
+    right: 10px;
+}
+
+.enpot-search-item {
+    clear: both;
+    margin-top: 8px;
+    margin-left: 12px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.enpot-search-line {
+    margin: 5px 0px 10px 5px;
+    height: 2px;
+    border-top: solid 1px #95B8E7;
+}
+
+.enpot-search-btnGroup {
+    clear: both;
+    margin: 5px 0px 10px 5px;
+    height: 32px;
+    border-top: solid 1px #95B8E7;
+    padding: 8px 0px;
+}
+
+.enpot-search-btnReset {
+    width: 49%;
+    height: 26px;
+    float: left
+}
+
+.enpot-search-btnSearch {
+    width: 49%;
+    height: 26px;
+    float: right
+}
+
+/*.tbTitle {
+    text-align: right;
+    font-weight: normal;
+    height: 30px;
+}
+
+.tbContent {
+    text-align: left;
+    width: 100px;
+    font-weight: bold;
+}*/

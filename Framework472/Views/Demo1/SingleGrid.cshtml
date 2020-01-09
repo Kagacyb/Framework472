@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+    ViewBag.Title = "单Grid";
+}
+
+@Scripts.Render("~/Scripts/enpot/demo1.singlegrid.js?" + Guid.NewGuid())
+<div class="easyui-layout" style="width: 100%; height: 100%" data-options="fit:true">
+    <div id="gvItemTitle" data-options="region:'center',split:true,collapsible:false" title=" ">
+        <table id="gvItem" class="easyui-datagrid" data-options="remoteSort: false,rownumbers:true,singleSelect:true,border:false,fit:true,striped:true">
+            <thead>
+                <tr>
+                    <th data-options="field:'SAPDeliveryNoteRef',width:80,sortable:true">SAP单号</th>
+                    <th data-options="field:'ReceiveDate', width:80,sortable:true">到货日期</th>
+                    <th data-options="field:'SAPCompanyName', width:250, sortable:true">发货方</th>
+                    <th data-options="field:'PickOrderQty',width:80,align:'right',sortable:true">拣配单数量</th>
+                    <th data-options="field:'PlanCartonQty',width:80,align:'right',sortable:true">拣配箱数</th>
+                    <th data-options="field:'ActuallyCartonQty',width:80,align:'right',sortable:true">实收箱数</th>
+                    <th data-options="field:'DiffCartonQty',width:80,align:'right',sortable:true">差异箱数</th>
+                    <th data-options="field:'Operator',width:80,sortable:true">仓务员</th>
+                    <th data-options="field:'OrderStatus',width:80,sortable:true">未审核</th>
+                    <th data-options="field:'ApprovedDate',width:80,sortable:true">审核时间</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+}
+<div class="easyui-layout" style="width: 100%; height: 100%" data-options="fit:true">
+
+    <div data-options="region:'west',split:true,collapsible:true" title="按下列任何标准进行搜索" style="width: 210px; padding-right: 5px">
+        <div style="padding: 5px;">
+            @RenderSection("left")
+        </div>
+        <div class="enpot-search-btnGroup">
+            <input type="button" value="重置" class="easyui-linkbutton enpot-search-btnReset" id="btnReset" />
+            <input type="button" value="搜索" class=" easyui-linkbutton enpot-search-btnSearch" id="btnSearch" />
+        </div>
+    </div>
+
+    <div data-options="region:'center' ,border:false">
+
+        <div class="easyui-layout" style="width: 100%; height: 100%" data-options="fit:true">
+            @RenderBody()
+        </div>
+    </div>
+</div>

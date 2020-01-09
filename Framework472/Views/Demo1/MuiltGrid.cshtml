@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+    ViewBag.Title = "双表格";
+}
+@Scripts.Render("~/Scripts/enpot/pagination.js")
+@Scripts.Render("~/Scripts/enpot/demo1.muiltgrid.js?" + Guid.NewGuid())
+    <div class="easyui-layout" style="width: 100%; height: 100%" data-options="fit:true">
+        <div id="gvItemTitle" data-options="region:'north',split:true,collapsible:false" title=" " style="height: 60%;">
+            <table id="gvItem" class="easyui-datagrid" data-options="remoteSort: false,rownumbers:true,singleSelect:true,border:false,fit:true,striped:true,pagination:true,toolbar:'#gvTools'">
+                <thead>
+                    <tr>
+                        <th data-options="field:'SAPRef',width:80">SAP单号</th>
+                        <th data-options="field:'ReceiveDate', width:80">到货日期</th>
+                        <th data-options="field:'SAPCompanyName', width:250">发货方</th>
+                        <th data-options="field:'PickOrderQty',width:80,align:'right'">拣配单数量</th>
+                        <th data-options="field:'PlanCartonQty',width:80,align:'right'">拣配箱数</th>
+                        <th data-options="field:'ActuallyCartonQty',width:80,align:'right'">实收箱数</th>
+                        <th data-options="field:'DiffCartonQty',width:80,align:'right'">差异箱数</th>
+                        <th data-options="field:'Operator',width:80">仓务员</th>
+                        <th data-options="field:'OrderStatus',width:80">未审核</th>
+                        <th data-options="field:'ApprovedDate',width:80">审核时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>    <div id="gvTools" style="height: auto">
+            <input type="button" class="easyui-linkbutton" data-options="plain:true" style="width: 80px; height: 26px;" id="btnLoad" value="获取数据" />
+        </div>
+        <div id="gvDetailTitle" data-options="region:'center'" title=" ">
+            <table id="gvDetail" class="easyui-datagrid" data-options="rownumbers:true,singleSelect:true,border:false,fit:true,striped:true">
+                <thead>
+                    <tr>
+                        <th data-options="field:'ProductCode',width:80">品号</th>
+                        <th data-options="field:'ProductName', width:200">品名</th>
+                        <th data-options="field:'PickOrderQty', width:80,align:'right'">拣配单数量</th>
+                        <th data-options="field:'PlanCartonQty',width:80,align:'right'">拣配箱数</th>
+                        <th data-options="field:'ActuallyCartonQty',width:80,align:'right'">实收箱数</th>
+                        <th data-options="field:'DiffCartonQty',width:80,align:'right'">差异箱数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>

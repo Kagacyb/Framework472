@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+    ViewBag.Title = "基础控件";
+}
+@Styles.Render("~/Content/enpot-icons.css")
+@Scripts.Render("~/Scripts/easyui/plugins/jquery.color.js")
+@Scripts.Render("~/Scripts/enpot/demo2.basecontrol.js?" + Guid.NewGuid())
+<div class="easyui-layout" style="width: 100%; height: 100%" data-options="fit:true">
+    <div class="easyui-panel" title="表单" style="width:400px">
+        <form id="ff" style="padding:10px">
+
+            <div style="margin-bottom:5px">
+                <input class="easyui-textbox" label="文本标题:" id="textbox" type="text" data-options="width:200" />
+            </div>
+            <div style="margin-bottom:5px">
+                <input class="easyui-numberbox" label="数字标题:" id="numberbox" type="text" value="100" data-options="min:0,max:100,precision:0,width:200">
+
+            </div>
+            <div style="margin-bottom:5px">
+                <input class="easyui-passwordbox" id="passwordbox" label="密码标题:" prompt="Password" iconWidth="28" data-options="width:200">
+            </div>
+            <div style="margin-bottom:5px">
+                <select class="easyui-combobox" id="combobox" label="单选标题:" name="language" data-options="width:200">
+                    <option value="ar">Arabic</option>
+                    <option value="bg">Bulgarian</option>
+                    <option value="ca">Catalan</option>
+                    <option value="zh-cht">Chinese Traditional</option>
+                    <option value="cs">Czech</option>
+                    <option value="da">Danish</option>
+                    <option value="nl">Dutch</option>
+                    <option value="en" selected="selected">English</option>
+                    <option value="et">Estonian</option>
+                    <option value="fi">Finnish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="el">Greek</option>
+                    <option value="ht">Haitian Creole</option>
+                    <option value="he">Hebrew</option>
+                    <option value="hi">Hindi</option>
+                    <option value="mww">Hmong Daw</option>
+                    <option value="hu">Hungarian</option>
+                    <option value="id">Indonesian</option>
+                    <option value="it">Italian</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="lv">Latvian</option>
+                    <option value="lt">Lithuanian</option>
+                    <option value="no">Norwegian</option>
+                    <option value="fa">Persian</option>
+                    <option value="pl">Polish</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="ro">Romanian</option>
+                    <option value="ru">Russian</option>
+                    <option value="sk">Slovak</option>
+                    <option value="sl">Slovenian</option>
+                    <option value="es">Spanish</option>
+                    <option value="sv">Swedish</option>
+                    <option value="th">Thai</option>
+                    <option value="tr">Turkish</option>
+                    <option value="uk">Ukrainian</option>
+                    <option value="vi">Vietnamese</option>
+                </select>
+            </div>
+
+
+            <div style="margin-bottom:5px">
+                <input class="easyui-datebox" id="datebox" label="日期标题:" name="datebox" data-options="width:200" />
+            </div>
+
+            <div style="margin-bottom:5px">
+                <input class="easyui-filebox" type="text" id="filebox" label="上传标题:" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+            </div>
+            <div style="margin-bottom:5px">
+                <label for="radiobutton1" style="margin-right:5px">单选(123):  </label>
+                <input class="easyui-radiobutton" type="radio" id="radio1-1" name="radiobutton1" value="1" label="1" labelAlign="right" data-options="labelWidth:40"  />
+                <input class="easyui-radiobutton" type="radio" id="radio1-2" name="radiobutton1" value="2" label="2" labelAlign="right" data-options="labelWidth:40"/>
+                <input class="easyui-radiobutton" type="radio" id="radio1-3" name="radiobutton1" value="3" label="3" labelAlign="right" data-options="labelWidth:40"/>
+            </div>
+            <div style="margin-bottom:5px">
+                <label for="radiobutton2" style="margin-right:5px">单选(ABC):  </label>
+                <input class="easyui-radiobutton" type="radio" id="radio2-1" name="radiobutton2" value="A" label="A" labelAlign="right" data-options="labelWidth:40" />
+                <input class="easyui-radiobutton" type="radio" id="radio2-2" name="radiobutton2" value="B" label="B" labelAlign="right" data-options="labelWidth:40"/>
+                <input class="easyui-radiobutton" type="radio" id="radio2-3" name="radiobutton2" value="C" label="C" labelAlign="right" data-options="labelWidth:40"/>
+            </div>
+            <div style="margin-bottom:5px">
+                <label for="radiobutton2" style="margin-right:5px">多选标题:  </label>
+                <input class="easyui-checkbox" type="checkbox" id="chkRed" name="checkbox" value="Red" label="Red" labelAlign="right" data-options="labelWidth:60"/>
+                <input class="easyui-checkbox" type="checkbox" id="chkYellow" name="checkbox" value="Yellow" label="Yellow" labelAlign="right" data-options="labelWidth:60"/>
+                <input class="easyui-checkbox" type="checkbox" id="chkBlue" name="checkbox" value="Blue" label="Blue" labelAlign="right" data-options="labelWidth:60"/>
+            </div>
+            <div style="margin-bottom:5px">
+                <input class="easyui-color" id="colorbox" name="colorbox" label="颜色标题:" data-options="width:200" />
+            </div>
+
+            <div style="margin-bottom:5px">
+                <label for="switchbutton" style="margin-right:5px">按钮:  </label><input class="easyui-switchbutton" id="switchbutton" name="switchbutton" data-options="onText:'是',offText:'否',width:80" />
+            </div>
+
+            <div style="padding:5px 0;">
+                <a href="#" id="btnSave" class="easyui-linkbutton" data-options="iconCls:'icon-disk'">保存</a>
+                <a href="#" id="btnReset" class="easyui-linkbutton" data-options="iconCls:'icon-arrow_refresh'" style="width:80px">重置</a>
+            </div>
+        </form>
+
+    </div>
+</div>

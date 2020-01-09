@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_EnpotLayout.cshtml";
+    ViewBag.Title = "登录";
+}
+@Styles.Render("~/Scripts/easyui/themes/default/easyui.css")
+@Styles.Render("~/Content/enpot-login.css")
+@Scripts.Render("~/Scripts/easyui/jquery.min.js")
+@Scripts.Render("~/Scripts/easyui/jquery.easyui.min.js")
+@Scripts.Render("~/Scripts/easyui/jquery.cookie.js")
+@Scripts.Render("~/Scripts/axios.min.js")
+@Scripts.Render("~/Scripts/enpot/login.js?" + @Guid.NewGuid())
+<div class="login-box-logo">
+</div>
+<div class=" login-box-warp">
+    <div class="login-box">
+        <div class="static-form">
+            <div class="login-title">
+                雄冠物流<br />
+                条码管理系统
+            </div>
+            <div class="login-ver">
+                V @ViewBag.FileVersion
+            </div>
+            <div class="field ">
+                <label for="txtAccount" class="login-username"><i class="iconfont" title="账号"></i></label>
+                <span class="ph-label">账号</span>
+                <input name="txtAccount" class="login-text" type="text" id="txtAccount" runat="server" />
+            </div>
+
+            <div class="field">
+                <label for="txtPwd" class="login-password"><i class="iconfont" title="密码"></i></label>
+                <span class="ph-label">密码</span>
+                <input name="txtPwd" class="login-text" type="password" id="txtPwd" runat="server" />
+            </div>
+            <div class="field">
+
+                <input type="button" value="登  入" id="btnLogin" class="btnLogin" />
+            </div>
+            <div class="login-footer">
+                技术支持:<br />
+                广州市雄冠条码实业有限公司
+            </div>
+        </div>
+    </div>
+</div>
+

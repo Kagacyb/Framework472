@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Scripts/easyui/themes/metro/easyui.css")
+    @Styles.Render("~/Content/enpot-icons.css")
+    @Scripts.Render("~/Scripts/easyui/jquery.min.js")
+    @Scripts.Render("~/Scripts/easyui/jquery.easyui.min.js")
+    @Scripts.Render("~/Scripts/easyui/jquery.cookie.js")
+    @Scripts.Render("~/Scripts/enpot/base.js?" + Guid.NewGuid())
+    @Scripts.Render("~/Scripts/axios.min.js")
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>
